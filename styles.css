@@ -1,0 +1,281 @@
+html,
+body {
+    background: linear-gradient(180deg, #000046, #3b8ea5);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+footer {
+    height: 30px;
+    width: 100%;
+    padding: 0;
+    position: relative;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.25);
+    display: flex;
+    animation: 1s ease-out 0s 1 dopadni-zlava;
+}
+
+footer p {
+    margin: auto auto;
+    width: fit-content;
+}
+
+nav {
+    background-color: #172542;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-style: normal;
+}
+
+nav a:visited {
+    color: white;
+    text-decoration: none;
+    font-style: normal;
+}
+
+nav a:hover {
+    color: rgb(193, 218, 255);
+    text-decoration: none;
+    font-style: normal;
+}
+
+.material-icons {
+    vertical-align: middle;
+}
+
+.panel {
+    margin: 75px 100px 75px 100px;
+    background: rgba(0, 0, 0, 0.25);
+    animation: 1s ease-out 0s 1 dopadni-zhora;
+}
+
+.panel-obsah-s-obrazkom {
+    height: 100%;
+    display: flex;
+}
+
+.velky-obrazok {
+    height: 100%;
+}
+
+.stredny-obrazok {
+    height: 360px;
+}
+
+.maly-obrazok {
+    height: 100px;
+}
+
+.text-s-nav-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.odstavec-info-wrapper {
+    margin: 10px;
+    padding: 10px;
+}
+
+.bez-dolneho-marginu {
+    margin-bottom: 0;
+}
+
+.odstavec-info-wrapper ul {
+    list-style-type: square;
+}
+
+.kompaktny-text {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+#lokacia,
+#povolanie,
+#meno {
+    text-transform: uppercase;
+}
+
+#meno {
+    font-size: 3rem;
+}
+
+#povolanie {
+    font-size: 2rem;
+}
+
+#lokacia {
+    font-size: 1.5rem;
+}
+
+#osobne-info {
+    margin: 40px;
+    animation: 1s ease-out 0s 1 dopadni-zprava;
+}
+
+#contact {
+    display: flex;
+    flex-direction: column;
+}
+
+#contact a {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: white;
+    text-decoration: none;
+    font-style: normal;
+}
+
+#nadpis-hlavny {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 15px;
+    font-size: 2.15rem;
+}
+
+@media (max-width: 1200px) {
+    nav {
+        flex-direction: column;
+    }
+
+    nav a {
+        margin: 10px;
+    }
+
+    #meno {
+        font-size: 2.5rem;
+    }
+
+    #povolanie {
+        font-size: 1.5rem;
+    }
+
+    #lokacia {
+        font-size: 1rem;
+    }
+
+    #contact a {
+        margin: 0;
+    }
+}
+
+@media (max-width: 1024px) {
+    .panel-obsah-s-obrazkom {
+        flex-direction: column;
+    }
+
+    .panel {
+        margin: 50px 75px 50px 75px;
+    }
+
+    .video-yt {
+        width: 426px;
+        height: 240px;
+    }
+
+    .stredny-obrazok {
+        height: 180px;
+    }
+
+    .maly-obrazok {
+        height: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .kompaktny-text {
+        grid-template-columns: auto;
+    }
+
+    .panel {
+        margin: 25px 50px 25px 50px;
+    }
+
+    .video-yt {
+        width: 256px;
+        height: 144px;
+    }
+
+    .stredny-obrazok {
+        height: 90px;
+    }
+
+    .maly-obrazok {
+        height: 45px;
+    }
+
+    #nadpis-hlavny {
+        width: auto;
+    }
+}
+
+@media (max-width: 360px) {
+    .video-yt {
+        width: 144px;
+        height: 81px;
+    }
+}
+
+
+
+@media print {
+    .velky-obrazok {
+        width: 300px;
+    }
+
+    .maly-obrazok {
+        height: 30px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+@keyframes dopadni-zhora {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes dopadni-zlava {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes dopadni-zprava {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
